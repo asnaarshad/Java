@@ -1,0 +1,32 @@
+
+package testmath;
+
+class Mathematics {  
+    public void divide(int num1, int num2) {            
+        try {
+               
+            System.out.println("Division is: " + (num1/num2));        }    
+        catch(ArithmeticException e){       
+          
+            System.out.println("Error: "+ e.getMessage());      
+        }         // Rest of the method    
+        System.out.println("Method execution completed");    } }
+
+public class TestMath {
+
+    public static void main(String[] args)     {         
+           
+        if(args.length==2) {                 
+           
+            Mathematics objMath = new Mathematics();      
+                
+            objMath.divide(Integer.parseInt(args[0]), Integer.parseInt(args[1]));         }
+               else {                  
+            System.out.println("Usage: java Mathematics <number1> <number2>");        
+        }    } } 
+            
+            
+            
+        
+            
+        

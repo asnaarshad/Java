@@ -1,0 +1,45 @@
+
+package testemployee;
+
+
+ class Employee { 
+
+ public void evaluateStatus(String empID, int empAge){     
+ final int age=40;         
+     
+ class Rank{                    
+public char getRank(String empID){
+              System.out.println("Getting Rank of employee: "+ empID);                                     
+                      
+  return 'A';                      }        
+   }      
+ 
+  if(empAge>=age){            
+Rank objRank = new Rank();    
+char rank = objRank.getRank(empID);                       
+
+ if(rank == 'A') {                     
+System.out.println("Employee rank is:"+ rank);               
+ System.out.println("Status: Eligible for upgrade");               
+}              
+ else{                       
+System.out.println("Status: Not Eligible for upgrade");              
+ }         
+}          
+else{                  
+System.out.println("Status: Not Eligible for upgrade");        
+ }    
+} 
+}
+public class TestEmployee {
+  public static void main(String[] args)   
+ {    
+           if(args.length==2) {
+                    Employee objEmp1 = new Employee();                                   
+objEmp1.evaluateStatus(args[0], Integer.parseInt(args[1]));    
+    }      
+  else{               
+ System.out.println("Usage: java Employee <Emp-Id> <Age>");       
+ } 
+   } 
+} 

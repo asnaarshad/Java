@@ -1,0 +1,65 @@
+//Static Method
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+interface Original{
+    void org();
+}
+class temp{
+    static void tempoo(){
+         System.out.println("Hello world!");
+    }
+      
+}
+class Main {
+    public static void main(String[] args) {
+     Original o=temp::tempoo;
+     o.org();
+    }
+}
+//using Instance Method
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+interface Original{
+    void org();
+}
+class temp{
+     void tempoo(){
+         System.out.println("Hello world!");
+    }
+      
+}
+class Main {
+    public static void main(String[] args) {
+        temp obj=new temp();
+     Original o=obj::tempoo;
+     o.org();
+    }
+}
+
+//contructor
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+interface Original{
+    void org();
+}
+class temp{
+     temp(){
+         System.out.println("Hello world!");
+    }
+      
+}
+class Main {
+    public static void main(String[] args) {
+     Original o=temp::new;
+     o.org();
+    }
+}

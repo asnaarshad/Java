@@ -1,0 +1,34 @@
+
+package javaapplication28;
+
+class input{
+public static String scanf(){
+byte b[]=new byte[255];
+int l=0;
+try{
+l=System.in.read(b,0,255);
+}
+catch(Exception e){
+}
+String s=new String(b,0,l-2);
+return(s);
+}}
+
+
+
+public class JavaApplication28 {
+
+   
+public static void main(String[] args) {
+String k;
+System.out.print("enter no of days: ");
+k=input.scanf();
+int a=Integer.parseInt(k);
+System.out.print("in correct format\n");
+System.out.print(a*24+":"+a*24*60+":"+a*24*60*60);
+
+
+    }
+    
+    
+}

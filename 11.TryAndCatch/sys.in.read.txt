@@ -1,0 +1,16 @@
+
+package javaapplication28;
+import java.io.IOException;
+
+
+public class JavaApplication28 {
+
+   
+         public static void main(String[] args) throws IOException {
+        System.out.println("Enter a character: ");
+        char c= (char)System.in.read();
+        System.out.println("You Enter : "+c);
+    }
+    
+    
+}

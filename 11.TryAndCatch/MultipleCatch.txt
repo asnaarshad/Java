@@ -1,0 +1,48 @@
+
+package javaapplication28;
+
+import java.util.Scanner;
+
+
+public class JavaApplication28 {
+
+   
+public static void main(String[] args) {
+   System.out.println("enter a number to check arthimatic Exception:");
+        Scanner sc=new Scanner(System.in);
+        try
+        {
+            int a=sc.nextInt();
+            int b=25/a; //to check arthimatic exception
+            int s=0;
+            System.out.println("No Arthimatic exception you entered "+b);
+            int []arr=new int[10];
+            arr[a]=s;
+            System.out.println("Now enter number of array");
+        for(int i=0;i<15;i++) //less than 15 takay tum loag out of bound ki exception dekh sako wese yahan 10 ana chaiye tha
+        {
+            arr[i]=sc.nextInt();
+        }
+        }
+        
+        catch(ArithmeticException e)
+        {
+            System.out.println("divided by zero \n"+e);   
+        }
+        
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("out of bound \n"+e);
+        }
+        
+        catch(Exception e)
+        {
+            System.out.println("other exception \n"+e);
+        }
+    }
+
+
+    }
+    
+    
+

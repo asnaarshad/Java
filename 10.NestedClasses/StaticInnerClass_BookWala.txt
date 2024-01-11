@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testatm;
+import java.util.Calendar; 
+
+class AtmMachine {     
+static class BankDetails   
+{  
+static Calendar objNow = Calendar.getInstance();   
+   
+  public static void printDetails(){                  
+ System.out.println("State Bank of America");               
+    System.out.println("Branch: New York");                  
+System.out.println("Code: K3983LKSIE");                               
+System.out.println("Date-Time:" + objNow.getTime());       
+ }  
+  }     
+
+  
+public void displayBalance(String accNo) {       
+System.out.println("Balance of account number " + accNo.toUpperCase() + "is $200000");    } 
+}
+
+
+public class TestATM { 
+public static void main(String[] args) { 
+    if(args.length ==1) {                         
+   AtmMachine objAtm = new AtmMachine();                           
+   AtmMachine.BankDetails.printDetails();                               
+objAtm.displayBalance(args[0]);            
+  }              
+else{                
+ System.out.println("Usage: java AtmMachine <account-no>");       }  
+  } 
+}    

@@ -1,0 +1,32 @@
+
+package javaapplication28;
+
+class input{
+public static String scanf(){ //making our own scanf() :D 
+byte b[]=new byte[255];
+int l=0;
+try{
+l=System.in.read(b,0,255);
+}
+catch(Exception e){
+}
+String s=new String(b,0,l-2);
+return(s);
+}}
+
+
+public class JavaApplication28 {
+
+   
+public static void main(String[] args) {
+String hours,mins,sec;
+System.out.print("enter hours: ");hours=input.scanf();
+System.out.print("enter minutes: ");mins=input.scanf();
+System.out.print("enter seconds: ");sec=input.scanf();
+System.out.print("time in correct format\n");
+System.out.println(hours+":"+mins+":"+sec);
+
+    }
+    
+    
+}

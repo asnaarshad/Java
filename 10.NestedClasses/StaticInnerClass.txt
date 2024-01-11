@@ -1,0 +1,41 @@
+
+package staticinner;
+
+class outer{
+    String name;
+    int age;
+   void details(){
+           System.out.println("NAME: "+name+"\nAge: "+age);
+   }
+       static class inner{
+        static String rollNo;
+        static int marks;
+        static void details2(){
+          //variable name and age are not accesible because they are non static
+           // System.out.println("NAME: "+name+"\nAge: "+age+"\nRoll No: "+rollNo+"\nMarks: "+marks);
+            System.out.println("\nRoll No: "+rollNo+"\nMarks: "+marks);
+
+            
+        }
+    }
+}     
+
+   
+
+public class StaticInner{
+
+    
+    public static void main(String[] args) {
+       outer v1=new outer();
+       v1.age=20;
+       v1.name="M Anas Zaki";
+       v1.details();
+        System.out.print("\ncalling Static inner class\n");
+       outer.inner.marks=20;
+       outer.inner.rollNo="Student12345"
+       outer.inner.details2();
+       
+       
+    }
+    
+}

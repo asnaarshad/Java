@@ -1,0 +1,26 @@
+
+package anonymous;
+
+class outer{
+    inner v1=new inner()
+    {
+        void display(){
+                System.out.println("hello");
+    }
+    }; // anonymous class ended
+}
+
+class inner{
+    void display(){
+}
+}
+
+public class Anonymous {
+
+ 
+    public static void main(String[] args) {
+       outer v2=new outer();
+       v2.v1.display();
+    }
+    
+}

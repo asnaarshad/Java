@@ -1,0 +1,21 @@
+
+package testmath;
+public class TestMath {
+
+     public static void main(String[] args) {    
+         int n1=10,n2=0;
+         System.out.println(n1+n2);
+         System.out.println(n1-n2);  
+             try {               
+                  System.out.println(n1/n2);  
+             }      
+catch (Exception e) { 
+System.out.println("Error:  "+ e.getMessage());    
+        
+}          
+finally {                  
+System.out.println(n1*n2);        
+}  
+     }
+       
+    }

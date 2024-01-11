@@ -1,0 +1,36 @@
+
+package localclass;
+
+class outer{
+    String name;
+    int age;
+   void details(){
+       class inner{
+        String rollNo;
+        int marks;
+        void details2(){
+            System.out.println("NAME: "+name+"\nAge: "+age+"\nRoll No: "+rollNo+"\nMarks: "+marks);
+        } //method of inner Closed
+    } //Inner Class Closed
+       inner v2=new inner();
+        v2.rollNo="Student12345";
+        v2.marks=100;
+        v2.details2();
+       
+   } //outer method closed
+   
+} //outer class closed
+
+
+
+public class LocalClass {
+
+    
+    public static void main(String[] args) {
+       outer v1=new outer();
+       v1.age=20;
+       v1.name="M Anas Zaki";
+       v1.details();
+    }
+    
+}

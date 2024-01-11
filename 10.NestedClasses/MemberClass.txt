@@ -1,0 +1,49 @@
+
+package memberclass;
+
+class outer{
+    String name;
+    int age;
+   void basic_details()
+   {
+       System.out.println("NAME: "+name+"\nAge: "+age);
+   }
+    
+    class inner{
+        String rollNo;
+        int marks;
+        void colg_details(){
+            System.out.println("Roll No: "+rollNo+"\nMarks: "+marks);
+        }
+        void all_details(){
+            System.out.println("NAME: "+name+"\nAge: "+age+"\nRoll No: "+rollNo+"\nMarks: "+marks);
+        }
+        
+    } 
+     /* You cannot use inner class varible in outer class class.
+    void all_outer(){
+            System.out.println("NAME: "+name+"\nAge: "+age+"\nRoll No: "+rollNo+"\nMarks: "+marks);
+        }*/
+}
+
+
+
+public class MemberClass {
+
+    
+    public static void main(String[] args) {
+        System.out.println("------------------Outer class----------------");
+       outer v1=new outer();
+       v1.age=20;
+       v1.name="M Anas Zaki";
+       v1.basic_details();
+        System.out.println("----------------Now Inner class----------------");
+        outer.inner v2=v1.new inner();
+        v2.marks=90;
+        v2.rollNo="Student109912";
+        v2.colg_details();
+        System.out.println("----------------Using Outer class variable in inner class----------------");
+         v2.all_details();
+    }
+    
+}

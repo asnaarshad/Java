@@ -1,0 +1,108 @@
+ -   Previous Versions:
+java.util.Date ,   java.util.Calendar.
+new
+java.util.time
+Local-
+Zoned-
+
+-------------------------------------------------------------------------------------local date
+      LocalDate d=LocalDate.now();
+        System.out.println(d);
+        System.out.println(d.getYear());
+or
+     LocalDate d=LocalDate.of(1900,10,16); //year,month,date
+        System.out.println(d);
+        System.out.println(d.getDayOfWeek());
+or
+    LocalDate d=LocalDate.of(1900,10,16); 
+        System.out.println(d.plusYears(5));
+or
+ LocalDate today=LocalDate.of(1983,Month.MAY,22);
+    System.out.println(today);  
+-------------------------------------------------------------------------------------local time
+ LocalTime t=LocalTime.now();
+        System.out.println(t.plusHours(5));
+     System.out.println(t.minusHours(5));
+or
+import java.time.format.DateTimeFormatter;
+String pattern = "hh:mm:ss a";
+LocalTime t=LocalTime.now();
+System.out.println(t.format(DateTimeFormatter.ofPattern(pattern)));
+-------------------------------------------------------------------------------------local dateandtime
+      LocalDateTime currentDateTime = LocalDateTime.now();
+      System.out.println("Current DateTime: " + currentDateTime);
+		
+      LocalDate date1 = currentDateTime.toLocalDate();
+      System.out.println("date1: " + date1);
+	
+	  LocalTime time1 = currentDateTime.toLocalTime();
+      System.out.println("time1: " + time1);	
+		
+      Month month = currentDateTime.getMonth();
+      int day = currentDateTime.getDayOfMonth();
+      int seconds = currentDateTime.getSecond();
+		
+      System.out.println("Month: " + month +"\nday: " + day +"\nseconds: " + seconds);
+-------------------------------------------------------------------------------------MonthDay
+MonthDay month = MonthDay.now();  
+    LocalDate date = month.atYear(1994);  
+    System.out.println(date); 
+-------------------------------------------------------------------------------------year
+Year y=Year.now();
+    System.out.println(y);
+   System.out.println(y.isLeap(2022));
+-------------------------------------------------------------------------------------YearMonth
+YearMonth ym=YearMonth.now();
+    System.out.println(ym);
+    System.out.println(ym.getMonthValue());
+     System.out.println(ym.getYear());
+   System.out.println(ym.isLeapYear());
+  -------------------------------------------------------------------------------------instant
+Instant i=Instant.now();
+System.out.println(i);
+Instant ifuture=i.plusNanos(4);
+System.out.println(ifuture);   
+Instant ifuture2=i.plusSeconds(4);
+System.out.println(ifuture2); 
+-------------------------------------------------------------------------------------Period
+        LocalDate noww=LocalDate.now();
+    LocalDate bdy=LocalDate.of(1900,10,16);
+    Period diff=Period.between(bdy,noww);
+    System.out.println(diff);  
+    System.out.println(diff.getYears()); 
+or
+LocalDate startDate = LocalDate.of(2015, 2, 20);
+LocalDate endDate = LocalDate.of(2017, 1, 15);
+Period period = Period.between(startDate, endDate);
+
+-------------------------------------------------------------------------------------Duration
+ 
+Instant start = Instant.now();
+Instant end = Instant.parse("2017-10-03T10:16:30.00Z");
+Duration duration = Duration.between(start, end); 
+System.out.println(duration);
+or
+LocalTime start = LocalTime.of(1, 40);
+LocalTime end = LocalTime.of(3, 40);
+System.out.print(Duration.between(start, end).toHours());
+-------------------------------------------------------------------------------------clock
+ Clock clock1 = Clock.systemUTC();
+         System.out.println("UTC = " + clock1);
+        System.out.println("UTC time = " + clock1.instant());
+or
+        Clock clock2 = Clock.systemDefaultZone();
+         System.out.println("UTC = " + clock2);
+        System.out.println("UTC time = " + clock2.instant());
+or
+    LocalDate a = LocalDate.now(Clock.systemDefaultZone());
+    System.out.println(a);
+
+-------------------------------------------------------------------------------------offset
+   LocalDateTime currentDateTime = LocalDateTime.now();
+    ZoneOffset off=ZoneOffset.of("+05:00");
+    OffsetDateTime finaltime=OffsetDateTime.of(currentDateTime,off);
+    System.out.println(finaltime);
+-------------------------------------------------------------------------------------zoned
+-------------------------------------------------------------------------------------Enums
+-------------------------------------------------------------------------------------temporal Adjusters
+

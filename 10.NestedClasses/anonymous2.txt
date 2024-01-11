@@ -1,0 +1,33 @@
+
+package anonymous;
+
+class outer{
+    String name;
+    int age;
+    inner v1=new inner()
+    {
+    String rollNo="student1234";
+    int marks=30;
+        void display(){
+                System.out.println("Name: "+name+"\nage: "+age+"\nRoll No: "+rollNo+"\nMarks "+marks);
+    }
+    }; // anonymous class ended
+}
+
+class inner{
+
+    void display(){
+}
+}
+
+public class Anonymous{
+
+ 
+    public static void main(String[] args) {
+       outer v2=new outer();
+       v2.age=20;
+       v2.name="zain";
+       v2.v1.display();
+    }
+    
+}

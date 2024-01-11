@@ -1,0 +1,20 @@
+
+package  calculate ;
+public class  Calculate  {
+
+    public static void main(String[] args) {     
+               
+            try {                    
+                int num3 = Integer.parseInt(args[0]) / Integer.parseInt(args[1]);   
+                System.out.println("Division is: "+num3);           }   
+            
+            catch (ArithmeticException e) { 
+              
+                System.out.println("Error: "+ e.getMessage());    
+            }
+            catch (NumberFormatException e){      
+                System.out.println("Error: Required Integer found String:" + e.getMessage());    
+            }           catch (Exception e) {               
+                System.out.println("Error: " + e.getMessage()); 
+            }            
+    } }

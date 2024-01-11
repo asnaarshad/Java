@@ -1,0 +1,22 @@
+package javaapplication95;
+
+public class JavaApplication95 {
+
+
+    public static void main(String[] args) {
+       int a=1;
+       int b=0;
+        System.out.println("addition:"+(a+b));
+        System.out.println("subtraction:"+(a-b));
+        try{
+        System.out.println("division:"+(a/b));
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        System.out.println("multiplication:"+(a*b));
+        
+    }
+    
+}
