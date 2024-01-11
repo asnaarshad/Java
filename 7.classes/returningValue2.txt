@@ -1,0 +1,10 @@
+class first_class{
+double method1(int x,int y){
+return Math.pow(x,y);
+}
+}
+class classname{
+public static void main(String arg[]){
+first_class variable=new first_class();
+double vol=variable.method1(2,3);
+System.out.print(vol);}}

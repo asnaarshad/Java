@@ -1,0 +1,20 @@
+class circle{
+double radius;
+String color;
+circle(String c){
+System.out.print("the color is "+c);}
+circle(double r){
+radius=r;}
+double cal(){
+return (radius);}
+double cal(double pi){
+return (pi*radius*radius);}
+}
+class CMAIN{
+public static void main(String arg[]){
+circle vari=new circle(2);
+circle varii=new circle("RED");
+System.out.print("\nthe radius is "+vari.cal());
+System.out.print("\nthe area is "+vari.cal(3.142));
+
+}}

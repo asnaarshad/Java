@@ -1,0 +1,26 @@
+
+
+package staticvariable;
+
+
+class Abc
+{
+    static int id;
+    int a;
+}
+public class StaticVariable {
+
+    public static void main(String[] args) {
+        
+        Abc abc=new Abc();
+        Abc abc1=new Abc();
+       abc.a=8;
+       abc.id=5;
+        System.out.println(abc.a);
+        System.out.println(abc1.a);
+        System.out.println(abc.id);
+        System.out.println(abc1.id);
+         System.out.println(abc.id);
+    }
+    
+}

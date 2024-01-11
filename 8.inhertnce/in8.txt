@@ -1,0 +1,39 @@
+
+
+package inheritance4;
+
+class A{
+    int width,height,area;
+    A(int a,int b,int c){
+        width=a;
+        height=b;
+        area=c;
+        System.out.println("width "+width+" height "+height+" area "+area);
+    }
+    void show_A(){
+        System.out.println("width "+width+" height "+height+" area "+area);
+    }
+}
+class B extends A{
+    B(){
+        super(1,2,3);
+        System.out.println("calling constructor of super class using super keyword");
+        
+    }
+
+    void show_B(){
+        show_A();
+        System.out.println("Calling method of parent class in child class");
+    }
+}
+public class Inheritance4 {
+
+    public static void main(String[] args) {
+       
+        B obj=new B();
+        System.out.println("--------------------------------------");
+        obj.show_A(); //METHOD OF SUPER CLASS
+        obj.show_B(); //METHOD OF SUB CLASS
+    }
+    
+}

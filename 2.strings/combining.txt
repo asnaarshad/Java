@@ -1,0 +1,5 @@
+class combining
+{ public static void main(String[] arg){
+String ans= "five is"+5;
+System.out.print(ans);
+}}

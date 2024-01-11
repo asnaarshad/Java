@@ -1,0 +1,68 @@
+
+package javaapplication29;
+abstract class phone{
+    abstract void callTime(double a);
+    abstract void Camera(double a);
+    abstract void ScreenSize(double a);
+    abstract void company();
+}
+ class A37 extends phone
+{
+   
+    @Override
+    void company()
+    {
+        System.out.println("Oppo");
+    }
+ @Override
+    void ScreenSize(double a){
+        System.out.println(a+" inches");
+    }
+    @Override
+    void callTime(double a) {
+        System.out.println(a+" hrs");
+    }
+
+    @Override
+    void Camera(double a) {
+        System.out.println(a+" px");
+    }
+
+}
+ class J7 extends phone
+{
+   
+    @Override
+    void company()
+    {
+        System.out.println("SamSung");
+    }
+ @Override
+    void ScreenSize(double a){
+        System.out.println(a+" inches");
+    }
+    @Override
+    void callTime(double a) {
+        System.out.println(a+" hrs");
+    }
+
+    @Override
+    void Camera(double a) {
+        System.out.println(a+" px");
+    }
+
+}
+public class JavaApplication29 {
+
+    public static void main(String[] args) {
+       A37 a=new A37();
+       a.company();
+       a.ScreenSize(3.7);
+       a.Camera(5);
+       J7 b=new J7();
+       b.company();
+       b.Camera(4);
+       b.callTime(122);
+    }
+    
+}

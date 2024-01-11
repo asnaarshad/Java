@@ -1,0 +1,33 @@
+
+
+package overloading;
+
+class Calculator
+{
+    void Add(int a, int b)
+    {
+        int ans=a+b;
+        System.out.println(ans);
+    }
+    /*void Add(int a,double b)
+    {
+        double ans=a+b;
+    }*/
+    void Add(int a, int b, int c)
+    {
+        int ans=a+b+c;
+        System.out.println(ans);
+    }
+}
+public class Overloading {
+
+
+    public static void main(String[] args) {
+        
+        Calculator obj=new Calculator();
+       obj.Add(2, 3);
+       obj.Add(2, 3, 4);
+        
+    }
+    
+}

@@ -1,0 +1,10 @@
+class first_class{
+void method1(int x){
+System.out.print(x);
+}
+}
+class classname{
+public static void main(String arg[]){
+first_class variable=new first_class();
+variable.method1(2);
+}}

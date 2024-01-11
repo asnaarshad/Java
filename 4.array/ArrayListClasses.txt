@@ -1,0 +1,68 @@
+
+
+
+package javaapplication20;
+
+import java.util.ArrayList;
+public class JavaApplication20 {
+  public static void main(String[] args) {
+       
+        ArrayList<Student> al=new ArrayList();
+        al.add(new Student("Ali",12,2));
+        al.add(new Student("Asad",12,2));
+        al.add(new Student("Abdullah",12,2));
+        al.add(new Student("Hassan",12,2));
+        al.add(new Student("Zakir",12,2));
+        
+        for(Object v:al)
+        {
+            System.out.println(v);
+        }
+        
+       al.clear();
+        System.out.println(al.size());
+    }
+    
+
+}
+class Student {
+    private String Name;
+    private int age;
+    private int id;
+
+    public Student(String Name, int age, int id) {
+        this.Name = Name;
+        this.age = age;
+        this.id = id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public String toString()
+    {
+        return "Name : "+this.getName()+" Age : "+this.getAge()+" Id :"+this.getId();
+    }
+}
+

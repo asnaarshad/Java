@@ -1,0 +1,63 @@
+
+
+package overloading1;
+
+class Calculator
+{
+    int a=4;
+    int ans;
+    double answer;
+     void cal()
+     {
+         System.out.println("Value of a : "+a);
+     }
+     void cal(int a)
+     {
+         ans=a*a;
+         System.out.println("SquareRoot : "+ans);
+     }
+     void cal(double a)
+     {
+         System.out.println("Ans : "+(a*a));
+     }
+     int cal(int a, int b, int c)
+     {
+         ans =a*b*c;
+         return ans;
+     }
+     double cal (double a,double b,double c)
+     {
+         answer=a*b*c;
+         return answer;
+     }
+     
+}
+public class Overloading1 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Calculator obj=new Calculator();
+        /*System.out.println("Without Parameter : ");
+        obj.cal();
+        System.out.println("Single Parameter Int : ");
+        obj.cal(4);
+        System.out.println("Single Parameter Double: ");
+        obj.cal(4.5);
+        //Return Type Integer
+        int x=obj.cal(4, 5, 6);
+      System.out.println("Return Type Int : "+x);
+      //return type double
+        
+        double y=obj.cal(3.5, 4.3, 5.2);
+        System.out.println("Without Parameter : "+y);
+        */
+   obj.cal();
+   obj.cal(3);
+   obj.cal(3.5);
+   int x=obj.cal(3,4,5);
+   double y=obj.cal(3.5,5.4,5.6);
+        System.out.println(x);
+        System.out.println(y);
+    }
+    
+}

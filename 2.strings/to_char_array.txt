@@ -1,0 +1,6 @@
+class to_char_array
+{ public static void main(String[] arg){
+String ur="to be or not to be";
+char[] im=ur.toCharArray();
+System.out.println(im[6]);
+}}

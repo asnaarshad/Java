@@ -1,0 +1,41 @@
+class employee{
+employee(String fn, String ln,int ssno){}
+}
+class S_employee extends employee{
+S_employee(String fn, String ln,int ssno,int w_sal){
+super(fn,ln,ssno);
+System.out.print("First name: "+fn+"\nLast name: "+ln+"\nsocial security no: "+ssno+"\nweekly salary: "+w_sal);}
+}
+class H_employee extends employee{
+int H_wrkd;
+H_employee(String fn, String ln,int ssno,int h_sal,int h_wrkd){
+super(fn,ln,ssno);
+System.out.print("\n\nFirst name: "+fn+"\nLast name: "+ln+" \nsocial security no: "+ssno+"\nhourly salary: "+h_sal+"\nhours worked: "+h_wrkd);}
+}
+class C_employee extends employee{
+double cmsn;
+C_employee(String fn, String ln,int ssno,int c_rate,int g_sales){
+super(fn,ln,ssno);
+cmsn=(g_sales*c_rate)/100;
+System.out.print("\n\nFirst name: "+fn+"\nLast name: "+ln+"\nsocial security no: "+ssno+"\ncommision rate: "+c_rate+"\ngrose sales: "+g_sales+"\ncommision: "+cmsn);}
+}
+class BPC_employee extends C_employee{ 
+double t_salry;
+BPC_employee(String fn, String ln,int ssno,int c_rate,int g_sales,int b_salry){
+super(fn,ln,ssno,c_rate,g_sales);
+cmsn=(g_sales*c_rate)/100;
+t_salry=cmsn+b_salry;
+System.out.print("\n\nFirst name: "+fn+"\nLast name: "+ln+"\nsocial security no: "+ssno+"\ngrose sales: "+g_sales+"\nbasic salary: "+b_salry+"\ntotal salry: "+t_salry);}
+}
+
+
+
+
+
+
+class EMAIN{
+public static void main(String arg[]){
+S_employee vari=new S_employee("Aatika","Liaquat",142,40000);
+H_employee varii=new H_employee("Aatika","Liaquat",142,400,2);
+C_employee variii=new C_employee("Aatika","Liaquat",142,5,25000);
+BPC_employee variiii=new BPC_employee("Aatika","Liaquat",142,5,25000,6000);}}

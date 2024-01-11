@@ -1,0 +1,31 @@
+
+
+package stu;
+
+class Box
+{
+    double width, height , depth;
+    Box(double w,double h ,double d)
+    {
+        width=w;
+        height=h;
+        depth=d;
+    }
+    void Area()
+    {
+        double ar;
+        ar=width*height*depth;
+        System.out.println("Area is "+ar);
+    }
+}
+public class Stu{
+
+    public static void main(String[] args) {
+    
+        System.out.println("Constructor With Arguments");
+        Box obj1=new Box(10,20,30);
+        obj1.Area();
+      
+    }
+    
+}

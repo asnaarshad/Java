@@ -1,0 +1,37 @@
+class weight{
+
+
+
+
+int kilog;
+int grm;
+weight(){
+kilog=0;
+grm=0;}
+weight(int k,int g){
+kilog=k;
+grm=g;}
+
+void getdata(int k,int g){
+kilog=k;
+grm=g;}
+
+void showdata(){
+System.out.print(" in kilogram: "+kilog+" in gram: "+grm+" ");}
+}
+
+
+class wg{
+public static void main(String args[]){
+weight v1=new weight(2,4);
+v1.getdata(2,4);
+v1.showdata();
+weight v2=new weight(2,4);
+v2.getdata(8,9);
+v2.showdata();
+weight v3=new weight();
+v3.getdata(v1.kilog+v2.kilog,v1.grm+v2.grm);
+v3.showdata();
+
+
+}}

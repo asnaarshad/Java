@@ -1,0 +1,11 @@
+class equals_Ignore_Case
+{ public static void main(String[] arg){
+String str1="too";
+String str2=" many";
+String str3="ToO mAny";
+str1+=str2;
+if(str1.equals(str3))
+System.out.print(".equals");
+if(str1.equalsIgnoreCase(str3))
+System.out.print("equalsIgnoreCase");
+}}

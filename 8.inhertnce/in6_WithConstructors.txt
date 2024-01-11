@@ -1,0 +1,29 @@
+
+package inheritance4;
+
+
+
+class A{
+    int width,height,area;
+    A(){
+        System.out.println("constructor A");
+    }
+}
+class B extends A{
+    B(){
+        System.out.println("Constructor B");
+    }
+}
+class C extends B{
+    C(){
+        System.out.println("constructor C");
+    }
+}
+public class Inheritance4 {
+    public static void main(String[] args) {
+         C obj=new C();
+         
+         System.out.println("here, just by calling constructor of child class the constructors in parent classes are automatically being called");
+    }
+    
+}

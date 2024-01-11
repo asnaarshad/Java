@@ -1,0 +1,8 @@
+class classname{
+double variable;
+public static void main(String arg[]){
+classname nd_variable=new classname();
+nd_variable.variable=12;
+System.out.print(nd_variable.variable);
+}}
+

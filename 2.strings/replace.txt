@@ -1,0 +1,6 @@
+class replace
+{ public static void main(String[] arg){
+String ur="to be or not to be";
+String im=ur.replace(' ','+');
+System.out.println(im);
+}}

@@ -1,0 +1,22 @@
+class sorting
+{
+public static void main(String arg[])
+{
+String student[][]= new String[5][2],h;
+int a,b,c=0;
+for(a=0;a<=4;a++){
+for(b=0;b<=1;b++){
+student[a][b]=arg[c];
+c++;}}
+for(a=0;a<=3;a++){
+for(b=a+1;b<=4;b++){
+if(student[a][0].compareTo(student[b][0])>0){
+h=student[a][0];
+student[a][0]=student[b][0];
+student[b][0]=h;
+h=student[a][1];
+student[a][1]=student[b][1];
+student[b][1]=h;}}}
+System.out.println("\nName\tDepartment\n");
+for(a=0;a<=4;a++){
+System.out.println(student[a][0]+"\t"+student[a][1]);}}}

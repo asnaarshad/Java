@@ -1,0 +1,42 @@
+
+
+package overridden;
+
+class companyA{
+    int a=10 ,b=20, c=30;
+    void cal(){
+       int d = a+b+c;
+        System.out.println(d);
+    }
+}
+class companyB extends companyA
+{
+    @Override
+    void cal()
+    {
+       int d = a*b*c;
+        System.out.println(d);
+    }
+}
+class companyC extends companyB{
+    @Override
+    void cal()
+    {
+       int d = a-b-c;
+        System.out.println(d);
+    }
+}
+public class Overridden {
+
+  
+    public static void main(String[] args) {
+        // TODO code application logic here
+        companyC c=new companyC();
+        companyB b=new companyB();
+        companyA a=new companyA();
+        c.cal();
+        b.cal();
+        a.cal();
+    }
+    
+}

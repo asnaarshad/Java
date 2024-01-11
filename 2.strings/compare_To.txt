@@ -1,0 +1,7 @@
+class compare_To
+{ public static void main(String[] arg){
+String str1="too";
+String str2=" many";
+if(str1.compareTo(str2)>0)
+System.out.print("true");
+}}

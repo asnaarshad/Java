@@ -1,0 +1,43 @@
+class books{
+
+private int c;
+private String t;
+private double p;
+
+books(int c,String t,double p){
+System.out.print("book code: "+c+" book title: "+t+" book price: "+p+" ");}
+}
+
+class text extends books{
+private int sem_no;
+private int quantity;
+text(int c,String t,double p){
+super(c,t,p);}
+void getdata(int s,int q){
+sem_no=s;
+quantity=q;
+}
+void showdata(){
+System.out.print(" semester no: "+sem_no+" quanitity: "+quantity+" \n");}
+}
+class journal extends books{
+private int ISSN_NO;
+private String MOP;
+journal(int c,String t,double p){
+super(c,t,p);}
+void getdata(int i,String m){
+ISSN_NO=i;
+MOP=m;}
+void showdata(){
+System.out.print(" ISSN_NO: "+ISSN_NO+" month of publishing: \n"+MOP);}
+}
+
+class lib{
+public static void main(String args[]){
+text v=new text(142,"aatika",1000);
+v.getdata(2,400);
+v.showdata();
+journal vi=new journal(144,"mehrunisa",2000);
+vi.getdata(96,"june");
+vi.showdata();
+}}

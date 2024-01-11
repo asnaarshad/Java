@@ -1,0 +1,56 @@
+
+package abc;
+
+
+class Person
+{
+    String Name;
+    String Address;
+    int Age;
+    
+    void print()
+    {
+        System.out.println("Name: "+Name);
+        System.out.println("Address : "+Address);
+        System.out.println("Age : "+Age);
+       
+    }
+}
+class student extends Person
+{
+    String Course;
+    int Marks;
+
+    void details()
+    {
+        System.out.println("Name: "+Name);
+        System.out.println("Address : "+Address);
+        System.out.println("Age : "+Age);
+        System.out.println("Course: "+Course);
+        System.out.println("Marks : "+Marks);
+    }
+}
+public class Abc {
+
+    public static void main(String[] args) {
+       
+        System.out.println("-----------------------------------parent class");
+        Person huda=new Person();
+        huda.Name="huda";
+        huda.Age=90;
+        huda.Address="nazimabad";
+        huda.print();
+        System.out.println("-----------------------------------Child class");
+        student sameer=new student();
+        sameer.Name="Sameer";
+        sameer.Age=90;
+       sameer.Address="nazimabad";
+sameer.Course="DISM";
+sameer.Marks=100;
+sameer.details();
+        
+        
+        
+    }
+    
+}

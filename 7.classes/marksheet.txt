@@ -1,0 +1,33 @@
+class marksheet{
+double SUB1;
+double SUB2;
+double SUB3;
+double SUB4;
+double SUB5;
+double sum;
+double per;
+void calculation(){
+sum=SUB1+SUB2+SUB3+SUB4+SUB5;
+per=(sum*100)/500;
+}
+void printing(){
+System.out.print("\nName:Aatika Liaquat");
+System.out.print("\nRoll no:142");
+System.out.print("\nDeciplain:Electronics");
+System.out.print("\nmarks obtain: "+sum);
+System.out.print("\npercentage: "+per);
+}
+}
+
+class MainClass{
+public static void main(String arg[]){
+marksheet variable=new marksheet();
+variable.SUB1=Double.parseDouble(arg[0]);
+variable.SUB2=Double.parseDouble(arg[1]);
+variable.SUB3=Double.parseDouble(arg[2]);
+variable.SUB4=Double.parseDouble(arg[3]);
+variable.SUB5=Double.parseDouble(arg[4]);
+variable.calculation();
+variable.printing();
+}
+}

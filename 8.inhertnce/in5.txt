@@ -1,0 +1,42 @@
+
+package inheritance3;
+
+import java.util.Scanner;
+
+class Student{
+    String[] Name=new String[2];
+    int[] age=new int[2];
+    String[] NOD=new String[2];
+}
+class clg extends Student{
+    void Record()
+    {
+        Scanner sc=new Scanner(System.in);
+        for(int i=0;i<Name.length;i++)
+        {
+            System.out.println("Enter Name of student"+i);
+            Name[i]=sc.next();
+            System.out.println("Enter age of student"+i);
+            age[i]=sc.nextInt();
+            System.out.println("Enter Name of dapartmaent"+i);
+            NOD[i]=sc.next();
+            
+        }
+    }
+        void print()
+        {
+               System.out.println("Name\tage\tdegree");
+               for(int i=0;i<Name.length;i++)
+               {
+                 System.out.println(Name[i]+"\t"+age[i]+"\t"+NOD[i]);
+               }          
+        }
+    }
+public class Inheritance3 {
+    public static void main(String[] args) {
+        clg obj=new clg();
+        obj.Record();
+        obj.print();
+    }
+    
+}

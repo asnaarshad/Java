@@ -1,0 +1,29 @@
+class calculation{
+double SUB1;
+double SUB2;
+double SUB3;
+double SUB4;
+double SUB5;
+double sum;
+double per;
+void method(){
+sum=SUB1+SUB2+SUB3+SUB4+SUB5;
+System.out.print("\nmarks obtain: "+sum);
+per=(sum*100)/500;
+System.out.print("\npercentage: "+per);
+}
+}
+
+class classname{
+public static void main(String arg[]){
+calculation variable=new calculation();
+variable.SUB1=Double.parseDouble(arg[0]);
+variable.SUB2=Double.parseDouble(arg[0]);
+variable.SUB3=Double.parseDouble(arg[0]);
+variable.SUB4=Double.parseDouble(arg[0]);
+variable.SUB5=Double.parseDouble(arg[0]);
+System.out.print("\nName:Aatika Liaquat");
+System.out.print("\nRoll no:142");
+System.out.print("\nDeciplain:Engineering");
+variable.method();
+}}

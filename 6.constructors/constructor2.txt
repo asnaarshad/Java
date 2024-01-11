@@ -1,0 +1,30 @@
+
+
+package stu;
+
+class Box
+{
+    int width , height ,depth;
+    Box()
+    {
+        width=10;
+        height=20;
+        depth=50;
+    }
+    void Area ()
+    {
+        int ar;
+        ar=width*height*depth;
+        System.out.println("Area is "+ar);
+    }
+}
+public class Stu {
+
+    public static void main(String[] args) {
+
+        Box obj=new Box();
+        System.out.println("here, you dont have to initialize any value because constructor box() has already initialized these variables");
+        obj.Area();
+    }
+    
+}

@@ -1,0 +1,63 @@
+
+package javaapplication20;
+import java.util.Scanner;
+
+public class JavaApplication20 {
+
+   
+    public static void main(String[] args) {
+        // TODO code application logic here
+       System.out.println("Enter Number:");
+       Scanner sc=new Scanner(System.in);
+       int num=sc.nextInt();
+        String[] right = new String[]{"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+        String[] left = new String[]{"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+        if (num == 0)
+        {
+            System.out.println(right[num]);
+        }
+        else
+            {
+              if (num > 100)
+              {
+                if ((num % 100) == 0)
+                {
+                    System.out.println(right[num / 100] + " " + "hundred");
+                }
+                else
+                    {
+                     int hundred = num / 100;
+                     int reminder = num % 100;
+                     int tens = reminder / 10;
+                     int ones = reminder % 10;
+                     if ((num % 100) < 20)
+                        System.out.println(right[hundred] + " " + "hundred" + " and " + right[reminder]);
+
+                     else
+                         if((reminder%10)==0)
+                             System.out.println(right[hundred]+" "+"hundred"+ " and " + left[tens-2] );
+                         else
+                            System.out.println(right[hundred] + " " + "hundred" + " and " + left[tens - 2] + " " + right[ones]);
+                    }
+              }
+              if(num<100)
+              {
+                if(num>=20)
+                {
+                    int tens = num / 10;
+                    int ones = num % 10;
+                    if((num%10)==0)
+                        System.out.println(left[tens-2]);
+                    else
+                    System.out.println(left[tens - 2] + " " + right[ones]);
+                }
+
+                else
+                 System.out.println(right[num]);
+              }
+            }
+
+    }
+    
+}

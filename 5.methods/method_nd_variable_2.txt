@@ -1,0 +1,12 @@
+class first_class{
+double value;
+void method1(double x){
+System.out.print(x*x);
+}
+}
+
+class classname{
+public static void main(String arg[]){
+first_class variable=new first_class();
+variable.method1(variable.value=3);
+}}

@@ -1,0 +1,45 @@
+class calculator{
+double a;
+double b;
+calculator(){
+a=2;
+b=2;
+}
+void sum(){
+double c=a+b;
+System.out.print(c);}
+void sub(){
+double c=a-b;
+System.out.print(c);}
+void mul(){
+double c=a*b;
+System.out.print(c);}
+void div(){
+double c=a/b;
+System.out.print(c);}
+
+}
+
+class classMain{
+public static void main(String arg[]){
+calculator va=new calculator();
+String a= arg[0];
+char[] im=a.toCharArray();
+switch(im[0]){
+case '+':
+va.sum();
+break;
+case '-':
+va.sub();
+break;
+case '*':
+va.mul();
+break;
+case '/':
+va.div();
+break;
+default:
+System.out.print("invalid");
+}
+
+}}

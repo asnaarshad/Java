@@ -1,0 +1,50 @@
+
+package refrence;
+
+class Box
+{
+    int a;
+}
+class BoxWeight extends Box
+{
+        
+    BoxWeight(int a){
+        System.out.println("Box weight Constructor with parameters");
+}
+        BoxWeight(){
+        System.out.println("Box weight Constructor");
+}
+    
+
+    int b;
+    void display(){
+        System.out.println("the sum in sub class is "+(a+b));
+    }
+}
+public class Refrence {
+
+    public static void main(String[] args) {
+        
+     
+        
+        Box super1=new Box(); //super class object
+        BoxWeight sub1=new BoxWeight(); //subclass object
+       
+sub1.a=19;
+sub1.b=10;
+sub1.display();
+        super1=sub1; //subclass variable can have value of super class variable
+
+       /* weight1=box1; //but superclass variable cannot have value of subclass variable*/
+
+        System.out.println("value of super class variable"+super1.a); 
+
+        /* System.out.println("value of super class variable"+super1.b); this is not possible as variable "b" is in subclass*/
+
+       Box box=new BoxWeight(2);  //A Superclass Variable Can Reference a Subclass Object
+     /*BoxWeight weight=new Box(); //but A Subclass Variable Cannot Reference a Superclass Object*/
+    
+    }
+    
+}
+

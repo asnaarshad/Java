@@ -1,0 +1,26 @@
+class account{
+int account_no=141;
+double ballance=30000;
+double amount;
+account(double a){
+amount=a;}
+
+double credit(){
+return (ballance+amount);}
+double debit()
+{
+if (amount>ballance)
+return (0);
+else
+return (ballance-amount);
+}
+}
+class AMAIN{
+public static void main(String args[]){
+account vari=new account(500000);
+System.out.print("credit= "+vari.credit()+"\n");
+if(vari.debit()==0)
+System.out.print("debit= amount withdrawn exceeds the current ballance");
+else
+System.out.print("debit= "+vari.debit());
+}}

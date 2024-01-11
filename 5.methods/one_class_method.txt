@@ -1,0 +1,9 @@
+class classname{
+void method(){
+System.out.print("hi");
+}
+public static void main(String arg[]){
+classname variable=new classname();
+variable.method();
+}}
+

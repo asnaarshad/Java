@@ -1,0 +1,24 @@
+
+package stu;
+
+
+class Student
+{
+    
+    Student()
+    {
+        System.out.println("Just by making object constructor is automatically called ");  
+    }
+    void Name()
+    {
+        System.out.println("Now I am in method Name");
+    }
+}
+public class Stu {
+
+    public static void main(String[] args) {
+        Student st=new Student();
+        st.Name();
+    }
+    
+}

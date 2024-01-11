@@ -1,0 +1,27 @@
+class lab7c{
+public static void main(String arg[]){
+int[][] arr=new int[4][4];
+for(int i=0;i<=3;i++){
+for(int j=0;j<=3;j++){
+arr[i][j]=(int)(9*Math.random()+1);
+}}//random generate
+for(int i=0;i<=3;i++){
+arr[i][i]=0;}//main diagnal=0
+int i,j;
+i=0;j=3;
+for(;i<=3;i++,j--){
+arr[i][j]=0;}//diagnol=0
+for(int a=0;a<=3;a++){
+for(int b=0;b<=3;b++){
+System.out.print(arr[a][b]+" ");}
+System.out.print("\n");}//printing
+
+for(int k=0;k<=3;k++){
+int ans=0;
+for(int l=0;l<=3;l++){
+ans+=arr[l][k];
+}
+System.out.print("the sum of coulumn "+(k+1)+"  is " +ans+"\n");}
+}}
+
+

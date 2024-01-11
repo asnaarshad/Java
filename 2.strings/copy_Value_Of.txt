@@ -1,0 +1,6 @@
+class copy_Value_Of
+{ public static void main(String[] arg){
+char[] ur={'t','o'};
+String im=String.copyValueOf(ur);
+System.out.println(im);
+}}

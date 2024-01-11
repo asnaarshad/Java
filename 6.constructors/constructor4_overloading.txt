@@ -1,0 +1,58 @@
+
+
+package stu;
+
+class Student
+{
+    int rollNo;
+    String name;
+    String address;
+    float marks;
+     
+    Student()
+     {
+         System.out.println("Constructor Without Any Argument");
+     }
+    
+    Student(int rNo, String sname) 
+    {    
+       System.out.println("Constructor With 2 Arguments");
+        rollNo = rNo;
+       name = sname;
+        System.out.println("Rollno :"+ rollNo);       
+        System.out.println("Student name:"+ name);  
+    }      
+    
+    Student(int rNo, float score) 
+    {     
+       System.out.println("Constructor With 2 Arguments but different Data Types");
+        rollNo = rNo;      
+        marks = score;   
+          System.out.println("Rollno :"+ rollNo); 
+          System.out.println("Score "+ marks);
+    } 
+    
+     Student(int rNo, String sname, float score) 
+     {     
+         System.out.println("Constructor With 3 Arguments");
+         rollNo = rNo;       
+         name = sname;       
+         marks = score;    
+     
+          System.out.println("Rollno :"+ rollNo);       
+          System.out.println("Student name:"+ name);            
+          System.out.println("Score "+ marks);       
+}
+}
+public class Stu {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        System.out.println("---------------------");
+        Student obj1 = new Student(302,"Ahsan");
+        System.out.println("---------------------");
+        Student objStud2 = new Student(103, 46); 
+        System.out.println("---------------------");
+        Student objStud3 = new Student(104, "hashim", 50);  
+    }
+    
+}

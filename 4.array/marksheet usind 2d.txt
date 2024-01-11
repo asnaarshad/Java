@@ -1,0 +1,21 @@
+class markss
+{
+ public static void main(String[] arg)
+{
+int k=0;
+String sheet[][]=new String[2][2];
+for(int a=0;a<2;a++)
+{
+for(int b=0;b<2;b++)
+{
+sheet[a][b]=arg[k];
+k++;
+}}
+for(int a=0;a<2;a++)
+{
+for(int b=0;b<2;b++)
+{
+System.out.print(sheet[a][b]+"\t");}
+System.out.print("\n");
+} }}
+

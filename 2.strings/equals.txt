@@ -1,0 +1,11 @@
+class equals
+{ public static void main(String[] arg){
+String str1="too";
+String str2=" many";
+String str3="too many";
+str1+=str2;
+if(str1==str3)
+System.out.print("==");
+if(str1.equals(str3))
+System.out.print(".equals");
+}}

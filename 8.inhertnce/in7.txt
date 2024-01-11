@@ -1,0 +1,46 @@
+
+package inheritance4;
+
+
+class A{
+    int width,height,area;
+    A(){
+        System.out.println("constructor A");
+    }
+    A(int a,int b,int c){
+        width=a;
+        height=b;
+        area=c;
+        System.out.println("Constructor A with parameters");
+       System.out.println("width "+width+" height "+height+" area "+area);
+    }
+  
+}
+class B extends A{
+    B(){
+        System.out.println("class B Constructor");
+    }
+    B(int a,int b,int c){
+        super(4,5,6);
+        width=a;
+        height=b;
+        area=c;
+        System.out.println("Parameter Constructor B");
+     System.out.println("width "+width+" height "+height+" area "+area);
+
+    }
+   
+}
+public class Inheritance4 {
+
+
+    public static void main(String[] args) {
+ System.out.println("-----------------------Without parameters-----------------------------");
+         B obj=new B();
+         System.out.println("*Object of B is made but constructor of Parent class A is automatically called*");
+ System.out.println("-----------------------With parameters-------------------------------");
+       B obj1=new B(1,2,3);
+        System.out.println("*Object of B is made but constructor of Parent class A is automatically called*");
+    }
+    
+}

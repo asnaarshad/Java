@@ -1,0 +1,17 @@
+public class JavaApplication26 {
+
+ public static void main(String[] args) {
+int k=0;
+int sheet[]=new int[3];
+for(int b=0;b<3;b++)
+{
+sheet[b]=2;
+k++;
+}
+
+for(int b:sheet)
+{
+System.out.print(sheet[b]+"\t");}
+System.out.print("\n");
+}
+    }

@@ -1,0 +1,7 @@
+class sUb_strIng
+{ public static void main(String[] arg){
+String ur="mjaatiinjgrika";
+String im=ur.substring(2,5);
+String in=ur.substring(11,14);
+System.out.println(im+in);
+}}

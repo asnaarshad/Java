@@ -1,0 +1,32 @@
+package stu;
+
+
+
+class Account
+{
+    int a;
+    int b;
+    public void setData(int a,int b)
+    {
+     this.a=a;
+     this.b=b;
+    }
+    public void showData()
+    {
+        System.out.println("Value of a : "+a);
+        System.out.println("Value of b : "+b);
+    }
+}
+public class Stu {
+   
+     public static void main(String[] args) {
+        Account obj=new Account();
+        obj.setData(2,3);
+        obj.showData();
+
+    Account obj1=new Account();
+    obj1.setData(3,4);
+    obj1.showData();
+    }
+    
+}

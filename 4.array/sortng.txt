@@ -1,0 +1,24 @@
+class sortng{
+public static void main(String arg[]){
+int[] arr=new int[5];
+System.out.print("Randomly generated nos are: ");
+for(int i=0;i<5;i++)
+{
+arr[i]=(int)(5*Math.random());
+System.out.print(arr[i]+" ");
+}
+for(int i=0;i<4;i++)
+{
+for(int j=(i+1);j<5;j++)
+{
+if(arr[i]<arr[j])
+{
+int temp;
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}}}
+System.out.print("\nin descending order: ");
+for(int i=0;i<5;i++)
+System.out.print(arr[i]+" ");
+}}

@@ -1,0 +1,9 @@
+class char_at
+{ public static void main(String[] arg){
+String text="i am aatika";
+int count=0;
+for(int a=0;a<text.length();a++)
+if(text.charAt(a)=='a')
+count++;
+System.out.print(count);
+}}

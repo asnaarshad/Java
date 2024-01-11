@@ -1,0 +1,55 @@
+
+package stu;
+
+class Box
+{
+    double width, height,depth;
+    Box()
+    {
+        System.out.println("Without Any Argument ");
+        width=height=depth=2;
+    }
+    Box(double w)
+    {
+        width=w;
+        height=depth=2;
+        System.out.println("With Single Argument");
+    }
+    Box(double w,double h)
+    {
+        width=w;
+        height=h;
+        depth=2;
+        System.out.println("With 2 Arguments");
+    }
+    Box(double w,double h, double d)
+    {
+        width=w;
+        height=h;
+        depth=d;
+        System.out.println("With 3 Argument");
+    }
+    void Area()
+    {
+        double ar=width*height*depth;
+        System.out.println(ar);
+    }
+}
+public class Stu {
+
+ 
+    public static void main(String[] args) {
+        Box obj=new Box();
+         obj.Area();
+        Box obj2=new Box(1);
+        obj2.Area();
+        Box obj3=new Box(1,2);
+        obj3.Area();
+        Box obj4=new Box(1,2,3);
+        obj4.Area();
+       
+        
+        
+    }
+    
+}
