@@ -1,0 +1,23 @@
+
+package printf;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Printf {
+
+    public static void main(String[] args) {
+        Random r= new Random();
+        int num= r.nextInt(10);
+        System.out.println(num);
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a==num){
+            System.out.println("Matched");
+        }else
+        {
+            System.out.println("Not Matched");
+        }
+    }
+    
+}

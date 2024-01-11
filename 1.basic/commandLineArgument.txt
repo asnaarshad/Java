@@ -1,0 +1,16 @@
+package javaapplication1;
+
+import java.util.Scanner;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+
+        if (args.length == 2) {
+            System.out.println("NUMBER ONE IS " + Integer.parseInt(args[0]) + "AND NUMBER TWO IS" + Integer.parseInt(args[1]));
+        } else {
+            System.out.println("No arguments found");
+        }
+    }
+
+}

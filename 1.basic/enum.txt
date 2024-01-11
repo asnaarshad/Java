@@ -1,0 +1,15 @@
+public class EnumDirection {
+
+ enum Direction {
+ East, West, North, South
+ }
+ 
+ public static void main(String[] args) {
+ 
+ Direction dir;
+
+ dir = Direction.East;
+
+ System.out.println("Value: " + dir);
+ }
+}

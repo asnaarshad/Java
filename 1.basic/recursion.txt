@@ -1,0 +1,23 @@
+package recursion;
+
+public class Recursion {
+
+    public static void main(String[] args) {
+              int a=7;
+     
+       int b=cal(a);
+        System.out.println(b);
+    }
+    static int cal(int n)
+    {
+      
+    
+        if(n>=1)
+        {
+           return n*cal(n-1);
+        }
+        else{ return 1;
+        }
+    }
+ 
+    }
